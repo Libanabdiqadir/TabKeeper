@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0f172a !important;
+    color: #f8fafc !important;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #1e293b;
+    width: 100%;
+    max-width: 450px;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    height: fit-content; 
+    align-self: flex-start; 
+}
+
+h1 {
+    color: #38bdf8 !important;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.bookmark-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+}
+
+#url {
+    flex: 1;
+    background: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 6px;
+    padding: 12px;
+    color: #ffffff !important;
+    outline: none;
+}
+
+#url:focus {
+    border-color: #38bdf8;
+}
+
+.saveBtn {
+    background-color: #38bdf8;
+    color: #0f172a !important;
+    border: none;
+    padding: 0 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.saveBtn:hover {
+    background-color: #7dd3fc;
+}
+
+.saveBtn:active {
+    transform: scale(0.95);
+}
+
+.bookmark-list {
+    list-style: none;
+}
+
+.bookmark-item {
+    background-color: #334155;
+    margin-top: 10px;
+    padding: 12px 15px;
+    border-radius: 8px;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.bookmark-item a, 
+.bookmark-item a:visited, 
+.bookmark-item a:link {
+    color: #38bdf8 !important;
+    text-decoration: none !important;
+    font-size: 0.95rem;
+    word-break: break-all;
+    max-width: 85%;
+}
+
+.bookmark-item a:hover {
+    text-decoration: underline !important;
+}
+
+.delete-btn {
+    flex-shrink: 0; 
+    background: none;
+    border: none;
+    color: #94a3b8;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.delete-btn:hover {
+    color: #f87171 !important;
+}
+
